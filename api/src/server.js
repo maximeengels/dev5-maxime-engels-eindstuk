@@ -50,6 +50,7 @@ app.get('/story/:uuid', async (req, res) => {
   })
 })
 
+//initialise database and api tables
 
 async function initialiseTables() {
   await pg.schema.hasTable('storyblock').then(async (exists) => {
