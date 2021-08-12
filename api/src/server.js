@@ -85,6 +85,7 @@ async function initialiseTables() {
           for (let i = 0; i < 10; i++) {
             const uuid = Helpers.generateUUID();
             await pg.table('story').insert({ uuid, title: `random element number ${i}` })
+            //hier voeg ik dan een nieuwe feat toe
           }
         });
         
