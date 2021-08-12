@@ -27,7 +27,6 @@ app.use(
 );  
 
 app.get('/test', (req, res) => {
-
   res.status(204).send();
 })
 
@@ -83,7 +82,10 @@ async function initialiseTables() {
           console.log('created table story');
           for (let i = 0; i < 10; i++) {
             const uuid = Helpers.generateUUID();
-            await pg.table('story').insert({ uuid, title: `random element number ${i}` })
+            await pg.table('story').insert({ 
+              uuid, 
+              title: `random element number ${i}`
+            })
           }
         });
         
