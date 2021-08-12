@@ -83,6 +83,7 @@ async function initialiseTables() {
         .then(async () => {
           console.log('created table story');
           for (let i = 0; i < 10; i++) {
+            //added another feat
             const uuid = Helpers.generateUUID();
             await pg.table('story').insert({ uuid, title: `random element number ${i}` })
             //hier voeg ik dan een nieuwe feat toe
